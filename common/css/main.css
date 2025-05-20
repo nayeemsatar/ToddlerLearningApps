@@ -1,0 +1,128 @@
+/* Common styles for all toddler apps */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.app-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.app-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #4dabf7;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #20c997;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    background-color: #4dabf7;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #339af0;
+    transform: scale(1.05);
+}
+
+.btn-home {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #ff6b6b;
+}
+
+.btn-home:hover {
+    background-color: #fa5252;
+}
+
+/* Fullscreen app styles */
+.fullscreen-app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animation for feedback */
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pop {
+    animation: pop 0.3s ease;
+}

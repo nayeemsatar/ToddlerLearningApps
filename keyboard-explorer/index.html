@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonetic Keyboard Explorer</title>
+    <link rel="stylesheet" href="../common/css/main.css">
+    <link rel="stylesheet" href="css/keyboard-explorer.css">
+</head>
+<body>
+    <div class="fullscreen-app keyboard-explorer">
+        <div class="app-header">
+            <h1>Phonetic Keyboard Explorer</h1>
+            <div class="image-set-selector">
+                <button class="btn image-set-btn active" data-set="animals">Animals</button>
+                <button class="btn image-set-btn" data-set="vehicles">Vehicles</button>
+                <button class="btn image-set-btn" data-set="instruments">Instruments</button>
+            </div>
+        </div>
+        
+        <div class="letter-display" id="letterDisplay">
+            <div class="image-container" id="imageContainer">
+                <!-- Image will be displayed here -->
+            </div>
+            <div class="letter-container">
+                <span class="letter" id="currentLetter"></span>
+            </div>
+            <div class="word-container" id="wordContainer">
+                <!-- Word will be displayed here -->
+            </div>
+            <div class="instruction" id="instruction">Press the letter on your keyboard!</div>
+            <div class="progress-bar">
+                <div class="progress-indicator" id="progressIndicator"></div>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="btn btn-home">Home</a>
+    </div>
+
+    <script src="js/keyboard-explorer.js"></script>
+</body>
+</html>

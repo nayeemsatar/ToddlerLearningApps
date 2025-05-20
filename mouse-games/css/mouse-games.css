@@ -1,0 +1,128 @@
+.mouse-games {
+    background-color: #f8f9fa;
+}
+
+.game-container {
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.game-selector {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #e9ecef;
+    border-bottom: 3px solid #dee2e6;
+}
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.game-btn {
+    background-color: #4dabf7;
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+}
+
+.game-btn.active {
+    background-color: #339af0;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-area {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.game-start-message {
+    text-align: center;
+    color: #6c757d;
+}
+
+/* Whack-a-Shape Game Styles */
+.shape {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.shape:hover {
+    transform: scale(1.05);
+}
+
+.shape.circle {
+    border-radius: 50%;
+}
+
+.shape.square {
+    border-radius: 10px;
+}
+
+.shape.triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Color Picker Game Styles */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 80%;
+    max-width: 800px;
+}
+
+.color-box {
+    aspect-ratio: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.color-box:hover {
+    transform: scale(1.05);
+}
+
+.target-color-instruction {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 2rem;
+    color: #495057;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+/* Animation for correct answer */
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2) rotate(10deg); }
+    100% { transform: scale(1) rotate(0); }
+}
+
+.celebrate {
+    animation: celebrate 0.5s ease;
+}

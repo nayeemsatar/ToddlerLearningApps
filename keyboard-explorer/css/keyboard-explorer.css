@@ -1,0 +1,194 @@
+.keyboard-explorer {
+    background-color: #e9ecef;
+}
+
+.app-header {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.app-header h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.image-set-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-set-btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #6c757d;
+}
+
+.image-set-btn.active {
+    background-color: #4dabf7;
+    transform: scale(1.05);
+}
+
+.letter-display {
+    width: 90%;
+    max-width: 1000px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+}
+
+.image-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.letter-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.letter {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #4dabf7;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.word-container {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 1rem;
+    height: 3rem;
+}
+
+.instruction {
+    font-size: 1.8rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    height: 2.5rem;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.progress-indicator {
+    height: 100%;
+    background-color: #4dabf7;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Letter color variations */
+.letter.red { color: #ff6b6b; }
+.letter.green { color: #51cf66; }
+.letter.blue { color: #339af0; }
+.letter.purple { color: #cc5de8; }
+.letter.yellow { color: #fcc419; }
+.letter.orange { color: #ff922b; }
+
+/* Animation for letter appearance */
+@keyframes appear {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.appear {
+    animation: appear 0.3s ease forwards;
+}
+
+/* Animation for letter feedback */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+.bounce {
+    animation: bounce 0.8s ease;
+}
+
+/* Animation for success */
+@keyframes success-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.success-pulse {
+    animation: success-pulse 0.5s ease;
+}
+
+/* Animation for incorrect */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .letter-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .letter {
+        font-size: 4rem;
+    }
+    
+    .word-container {
+        font-size: 2rem;
+    }
+    
+    .instruction {
+        font-size: 1.5rem;
+    }
+}

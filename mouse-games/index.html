@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Click Games</title>
+    <link rel="stylesheet" href="../common/css/main.css">
+    <link rel="stylesheet" href="css/mouse-games.css">
+</head>
+<body>
+    <div class="fullscreen-app mouse-games">
+        <div class="game-container">
+            <div class="game-selector">
+                <h1>Mouse Click Games</h1>
+                <div class="game-buttons">
+                    <button class="btn game-btn" id="whackShapeBtn">Whack-a-Shape</button>
+                    <button class="btn game-btn" id="colorPickerBtn">Color Picker</button>
+                </div>
+            </div>
+            
+            <div class="game-area" id="gameArea">
+                <!-- Game content will be loaded here -->
+                <div class="game-start-message">
+                    <h2>Choose a game to start!</h2>
+                </div>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="btn btn-home">Home</a>
+    </div>
+
+    <script src="js/mouse-games.js"></script>
+    <script src="js/whack-a-shape.js"></script>
+    <script src="js/color-picker.js"></script>
+</body>
+</html>
